@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="scroll" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="926.0" stylesheets="@Style/MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProduitsController">
+  <content>
+    <AnchorPane fx:id="anchor">
+         <children>
+            <TableView fx:id="listeProduit" layoutX="24.0" layoutY="70.0" prefHeight="361.0" prefWidth="853.0">
+              <columns>
+                <TableColumn fx:id="photo" prefWidth="75.0" text="Photo" />
+                <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="type" prefWidth="96.0" text="Type" />
+                  <TableColumn fx:id="description" prefWidth="223.0" text="Description" />
+                  <TableColumn fx:id="prix" prefWidth="75.0" text="Prix" />
+                  <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <stylesheets>
+                  <URL value="@../../../../StoreKeeper-master/StoreKeeper-master/src/style/MainStyle.css" />
+                  <URL value="@Style/MainStyle.css" />
+               </stylesheets>
+            </TableView>
+            <Label fx:id="produits" layoutX="393.0" layoutY="22.0" text="Les Produits">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+
+            <Button fx:id="ajouter" layoutX="376.0" layoutY="451.0" mnemonicParsing="false" onAction="#ajouterAupanier" text="Ajouter Au Panier" />
+            <Button fx:id="btn_panier" layoutX="745.0" layoutY="451.0" mnemonicParsing="false" onMouseClicked="#AffichagePanier" text="Consulter Panier" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
