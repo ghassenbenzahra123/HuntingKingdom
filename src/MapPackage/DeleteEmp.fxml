@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="410.0" style="-fx-background-color: white; -fx-border-color: #002d37;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MapPackage.EmpDeleteController">
+   <children>
+      <Text fill="#002d37" layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supprimer Emplacement" wrappingWidth="393.365966796875">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Text>
+      <Text fill="#002d37" layoutX="22.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voulez vous vraiment supprimer cet emplacement?" wrappingWidth="376.89434814453125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="empdelete" layoutX="253.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#deleteEmp" style="-fx-background-color: white; -fx-border-color: red;" text="Supprimer" />
+      <Button fx:id="cancel" alignment="CENTER" layoutX="336.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#cancel" style="-fx-background-color: white; -fx-border-color: grey;" text="Annuler" />
+   </children>
+</AnchorPane>

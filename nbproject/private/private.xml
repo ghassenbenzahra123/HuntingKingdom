@@ -4,10 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Fares/Documents/NetBeansProjects/HuntKingdom/src/MapPackage/MapController.java</file>
-            <file>file:/C:/Users/Fares/Documents/NetBeansProjects/HuntKingdom/src/Entities/Animal.java</file>
-            <file>file:/C:/Users/Fares/Documents/NetBeansProjects/HuntKingdom/src/Services/emplacementService.java</file>
-            <file>file:/C:/Users/Fares/Documents/NetBeansProjects/HuntKingdom/src/HuntKingdom.java</file>
-            <file>file:/C:/Users/Fares/Documents/NetBeansProjects/HuntKingdom/src/huntkingdomController.java</file>
+            <file>file:/C:/Users/Fares/Documents/NetBeansProjects/HuntKingdom/src/Services/animalService.java</file>
+            <file>file:/C:/Users/Fares/Documents/NetBeansProjects/HuntKingdom/src/MapPackage/EmpDeleteController.java</file>
+            <file>file:/C:/Users/Fares/Documents/NetBeansProjects/HuntKingdom/src/MapPackage/AnimalDeleteController.java</file>
         </group>
     </open-files>
 </project-private>
