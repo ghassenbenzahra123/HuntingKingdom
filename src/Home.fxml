@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="926.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="huntkingdomController">
+   <children>
+      <VBox layoutY="600.0" prefHeight="86.0" prefWidth="739.0" style="-fx-background-color: #009498;" />
+      <VBox alignment="CENTER" layoutX="739.0" layoutY="600.0" prefHeight="86.0" prefWidth="188.0" style="-fx-background-color: #002D37;">
+         <children>
+            <Text fill="#009498" strokeType="OUTSIDE" strokeWidth="0.0" text="TARGET GROUP" textAlignment="CENTER" wrappingWidth="186.541015625">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <ButtonBar layoutY="-2.0" prefHeight="86.0" prefWidth="926.0" style="-fx-background-color: white;">
+        <buttons>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#load_scene_1" text="Home" textFill="#0000008a" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="86.0" text="Matériels" textFill="#0000008a" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="85.0" text="Autorisations" textFill="#00000089" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="86.0" text="Forum" textFill="#00000089" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#load_scene_5" prefHeight="86.0" text="Map" textFill="#00000089" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="30.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="0.0" style="-fx-background-color: white;" textFill="#00000089">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@huntkingdom/icons/instagram.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button minWidth="0.0" mnemonicParsing="false" prefHeight="32.0" style="-fx-background-color: white;" textFill="#00000089">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@huntkingdom/icons/twitter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: white;" textFill="#00000089">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@huntkingdom/icons/facebook.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+        </buttons>
+      </ButtonBar>
+      <Pane fx:id="content_pane" layoutY="84.0" prefHeight="516.0" prefWidth="926.0" />
+   </children>
+</AnchorPane>
