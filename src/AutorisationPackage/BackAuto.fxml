@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#refresh_tables" prefHeight="516.0" prefWidth="926.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AutorisationPackage.BackAutoController">
+   <children>
+      <TableView fx:id="auto_table" layoutX="375.0" layoutY="47.0" prefHeight="409.0" prefWidth="511.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="34.655548095703125" resizable="false" text="ID" />
+          <TableColumn fx:id="type" prefWidth="104.03799438476562" resizable="false" text="Type" />
+            <TableColumn fx:id="description" prefWidth="184.0" resizable="false" text="Description" />
+            <TableColumn fx:id="categorie" prefWidth="69.0" resizable="false" text="Catégorie" />
+            <TableColumn fx:id="validite" prefWidth="56.0" resizable="false" text="Validité" />
+            <TableColumn fx:id="prix" prefWidth="65.0" resizable="false" text="Prix" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#delete_auto" text="Supprimer" />
+                  <MenuItem mnemonicParsing="false" onAction="#show_modifier" text="Modifier" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <TextField id="textfield_type" fx:id="input_type" layoutX="78.0" layoutY="149.0" prefHeight="37.0" prefWidth="229.0" promptText="Type" />
+      <Slider id="slider_prix" fx:id="input_prix" layoutX="82.0" layoutY="411.0" max="1000.0" prefHeight="18.0" prefWidth="221.0" showTickLabels="true" value="10.0" />
+      <Separator layoutX="53.0" layoutY="151.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Separator layoutX="346.0" layoutY="151.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Button fx:id="add_auto" layoutX="254.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#add_auto" prefHeight="33.0" prefWidth="45.0" style="-fx-background-color: #ffffff00;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../huntkingdom/icons/addbtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="834.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#show_graph" prefHeight="0.0" prefWidth="4.0" style="-fx-background-color: #ffffff00;">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../huntkingdom/icons/graphbtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ChoiceBox id="choice_catgorie" fx:id="input_categorie" layoutX="76.0" layoutY="90.0" prefHeight="37.0" prefWidth="229.0" />
+      <TextArea fx:id="input_description" layoutX="79.0" layoutY="201.0" prefHeight="189.0" prefWidth="190.0" promptText="Description" />
+      <Slider fx:id="input_validite" blockIncrement="30.0" layoutX="297.0" layoutY="201.0" max="900.0" orientation="VERTICAL" prefHeight="189.0" prefWidth="15.0" showTickLabels="true" />
+      <Label layoutX="53.0" layoutY="411.0" text="Prix" textFill="#797878" />
+      <Label layoutX="281.0" layoutY="394.0" text="Validité" textFill="#808080" />
+      <Label layoutX="76.0" layoutY="59.0" text="Categorie" textFill="#979595">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="auto_id" layoutX="220.0" layoutY="51.0" visible="false" />
+      <Button fx:id="edit_auto" layoutX="76.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#modifier_auto" prefHeight="45.0" prefWidth="46.0" style="-fx-background-color: #ffffff00;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../huntkingdom/icons/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="search_type" layoutX="411.0" layoutY="14.0" onKeyPressed="#SearchByType" prefHeight="27.0" prefWidth="140.0" promptText="Search Type" />
+      <Pane fx:id="ChartPane" layoutX="47.0" layoutY="12.0" onMouseClicked="#show_graph" prefHeight="487.0" prefWidth="850.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <PieChart fx:id="auto_pie" layoutX="122.0" layoutY="24.0" prefHeight="440.0" prefWidth="550.0" title="Statistiques Catégorie" />
+         </children>
+      </Pane>
+      <TextField fx:id="search_cat" layoutX="698.0" layoutY="14.0" onKeyPressed="#SearchByCat" prefHeight="27.0" prefWidth="128.0" promptText="Search Categorie" />
+      <TextField fx:id="search_id" layoutX="375.0" layoutY="14.0" onKeyPressed="#SearchById" prefHeight="27.0" prefWidth="34.0" promptText="ID" />
+   </children>
+</Pane>

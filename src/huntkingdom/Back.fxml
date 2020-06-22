@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="1035.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="huntkingdom.BackController">
+   <children>
+      <Pane layoutY="-6.0" prefHeight="151.0" prefWidth="1035.0" style="-fx-background-color: #007bff;">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="27.0" layoutX="23.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/home.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="33.0" text="HuntKingdom" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="15.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="113.0" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="130.0" text="Administrator" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="7.0" />
+               </font>
+            </Label>
+            <Label fx:id="label" layoutX="1011.0" layoutY="3.0" onMouseClicked="#exit" onMousePressed="#handleButtonAction" prefHeight="22.0" prefWidth="36.0" text="X" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="17.0" />
+               </font>
+            </Label>
+            <Pane layoutY="151.0" prefHeight="516.0" prefWidth="110.0" style="-fx-background-color: #4b545c;">
+               <children>
+                  <ImageView fx:id="auto_scenebtn" fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="106.0" onMouseClicked="#load_autoscene" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/auto.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="livraison_scenebtn" fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="298.0" onMouseClicked="#load_livraisonscene" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/livraison.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cmd_scenebtn" fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="238.0" onMouseClicked="#load_cmdscene" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/commande.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="map_scenebtn" fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="364.0" onMouseClicked="#load_mapscene" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/map.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="user_scenebtn" fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="35.0" onMouseClicked="#load_userscene" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/contact.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="produit_scenebtn" fitHeight="40.0" fitWidth="40.0" layoutX="29.0" layoutY="171.0" onMouseClicked="#load_produitscene" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/produit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="content_pane" layoutX="109.0" layoutY="145.0" prefHeight="516.0" prefWidth="926.0" />
+   </children>
+</AnchorPane>
